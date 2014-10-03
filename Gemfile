@@ -12,7 +12,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'omniauth'
-gem 'omniauth-github'
+gem 'omniauth-salesforce'
 gem 'pg'
 gem 'thin'
 group :development do
