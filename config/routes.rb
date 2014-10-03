@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'sessions#failure'
   post '/mortgage/calculate',    to: 'mortgage#calculate'
   get '/mortgage',    to: 'mortgage#index'
+  get '/canvas/index'
+  get '/canvas/salesforce', as :salesforce
+  post '/canvas/auth' => "canvas#auth"
 end
