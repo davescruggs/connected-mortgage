@@ -12,7 +12,8 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'omniauth'
-gem 'omniauth-salesforce'
+# had to do the following to avoid a bignum conversion issue with the client secret
+gem 'omniauth-salesforce', :git => 'https://github.com/realdoug/omniauth-salesforce'
 gem 'pg'
 gem 'thin'
 group :development do
