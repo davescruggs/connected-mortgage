@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			Borrowed Amount = <%= number_to_currency(@loan_amount)  %> ($<%= number_to_human(@loan_amount) %>) <br>
+			Term Length = <%= @term_length %><br>
+			Interest Rate = <%= @interest_rate %>%<br>
+
+			Monthly repayment = <%= number_to_currency(@monthly_repayment) %><br>
+
+			Total Interest Payable = <%= number_to_currency(@interest_paid) %> ($<%= number_to_human(@interest_paid) %>) <br>
+		</div>
+		<div class="col-md-4">
+			<img src="<%=Gchart.pie(:data => [300, 400], :labels =>['principal', 'interest'], :bg => 'eeeeee') %>"/>
+		</div>
+	</div>
+	<div class="row">
+		<br>
+		<div class="col-md-4">
+			<table>
+				<tr><th>Month: </th><th>Amount owed each month: </th><th>Aggregate paid each month: </th></tr>
+					<% for i in 0..@term_length_in_months - 1 %>
+					<tr><td><%= i %></td><td><%= number_to_currency(@amount_owed[i]) %></td><td><%= number_to_currency(@amount_paid[i]) %></td></tr>
+				<% end %>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<img src="<%=Gchart.line(:data => [@amount_paid, @amount_owed], :legend =>['amount paid', 'amount owed'] , :theme => :thirty7signals, :bg => 'eeeeee' )%>"/>
+		</div>
+	</div>
+</div>

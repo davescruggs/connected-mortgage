@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/davescruggs/restforce.git
+  revision: 3722050dcc481f5e1415ec881abfa77f9c86ae49
+  specs:
+    restforce (1.4.3)
+      faraday (>= 0.8.4, < 0.10)
+      faraday_middleware (>= 0.8.8)
+      hashie (>= 1.2.0, < 2.1)
+      json (>= 1.7.5, < 1.9.0)
+
+GIT
   remote: https://github.com/realdoug/omniauth-salesforce
   revision: 1c2bfc06ec87bf6e4ef5faa078d60cbbae55e9df
   specs:
@@ -60,7 +70,10 @@ GEM
     execjs (2.2.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    hashie (3.3.1)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
+    googlecharts (1.6.8)
+    hashie (2.0.5)
     high_voltage (2.2.1)
     hike (1.2.3)
     hub (1.12.2)
@@ -166,6 +179,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   coffee-rails (~> 4.0.0)
+  googlecharts
   high_voltage
   hub
   jbuilder (~> 2.0)
@@ -177,6 +191,7 @@ DEPENDENCIES
   rails (= 4.1.6)
   rails_12factor
   rails_layout
+  restforce!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
