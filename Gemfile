@@ -17,7 +17,7 @@ gem 'omniauth-salesforce', :git => 'https://github.com/realdoug/omniauth-salesfo
 gem 'pg'
 gem 'thin'
 gem "googlecharts", :require => "gchart"
-gem 'restforce', :git => 'https://github.com/davescruggs/restforce.git'
+# gem 'restforce', :git => 'https://github.com/davescruggs/restforce.git'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
