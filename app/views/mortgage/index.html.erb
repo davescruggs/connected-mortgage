@@ -5,15 +5,23 @@
       <div class="row">
         <div class="span6 offset3">
           <%= form_tag('/mortgage/calculate') do |f| %>
+          <div class="form-group">
             <%= label_tag(:loan_amount, "Total Loan Amount") %>
             <%= text_field_tag(:loan_amount, nil, :placeholder => 'in $') %>
+            </div>
+            <div class="form-group">
             <%= label_tag(:interest_rate, "Interest Rate") %>
             <%= text_field_tag(:interest_rate, nil, :placeholder => 'e.g. 10.4') %>%
+            </div>
+            <div class="form-group">
             <%= label_tag(:term, "Length of mortgage") %>
             <%= text_field_tag(:term) %>
+            </div>
+            <div class="form-group">
             <%= select_tag :term_unit, "<option value=1 selected='selected'>Months</option><option value=2>Years</option>".html_safe %>
             <br><br>
             <%= submit_tag 'Submit', :class => 'btn btn-primary' %>
+            </div>
           <% end %>
         </div>
       </div>
