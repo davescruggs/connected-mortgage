@@ -15,9 +15,7 @@
             </div>
             <div class="form-group">
             <%= label_tag(:term, "Length of mortgage") %>
-            <%= text_field_tag(:term) %>
-            </div>
-            <div class="form-group">
+            <%= text_field_tag(:term) %> 
             <%= select_tag :term_unit, "<option value=1 selected='selected'>Months</option><option value=2>Years</option>".html_safe %>
             <br><br>
             <%= submit_tag 'Submit', :class => 'btn btn-primary' %>
